@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<p id="element" style="position:absolute">This is a paragraph.</p>
+<script>
+	var element = document.getElementById("element")
+	var counter = 0
+	setInterval(function () {
+		counter = counter + 1
+		element.innerHTML = counter
+		element.style.backgroundColor = rgb(counter,0,counter)
+		element.style.color = rgb(0,counter,0)
+		element.style.top = counter+"px"
+		element.style.transform = "rotate("+counter+"deg)"
+	}, 100);
+	
+		
+	function rgb(r, g, b){
+	  return "rgb("+r+","+g+","+b+")";
+	}
+</script>
+</body>
+</html>
